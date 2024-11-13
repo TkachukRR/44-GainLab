@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#081223">
   <meta name="robots" content="index, follow">
   <meta name="description"
     content="Gainlab.io is the development company by Xtrades Inc. This website is dedicated to showcasing the products that we build at Xtrades Inc.">
@@ -16,15 +17,66 @@
   <link rel="stylesheet" href="styles.css">
   <title>Gainlab</title>
 </head>
-
+<!--[if IE]>
 <body class="font-['Roboto_Mono'] text-[#CED7F3] bg-[#081223] bg-no-repeat bg-cover
+  pt-[env(safe-area-inset-top)] pr-[env(safe-area-inset-right)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)]
+  text-sm leading-[18.46px] bg-[url('./images/bg-page-w375.png')]
+  2xl:text-2xl 2xl:leading-8 2xl:bg-[url('./images/bg-page-w1920.png')]
+  ">
+<![endif]-->
+<!--[if !IE]><!-->
+<body class="font-['Roboto_Mono'] text-[#CED7F3] bg-[#081223] bg-no-repeat bg-cover
+  pt-[env(safe-area-inset-top)] pr-[env(safe-area-inset-right)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)]
   text-sm leading-[18.46px] bg-[url('./images/bg-page-w375.webp')]
   2xl:text-2xl 2xl:leading-8 2xl:bg-[url('./images/bg-page-w1920.webp')]
   ">
+<!--<![endif]-->
 
-  <header class="h-6 p-2.5 2xl:h-[145px] 2xl:border-b border-[#CED7F3]"></header>
+  <header class="mb-[10px] 2xl:border-b 2xl:border-[#CED7F3] 2xl:text-[18px] 2xl:leading-[32.4px] uppercase">
+    <nav class="container mx-auto max-w-screen-xl relative">
+      <div class="flex justify-between items-center px-4 py-1.5 2xl:px-[70px] 2xl:py-[45px] group" role="navigation">
+        <div class="2xl:order-2 relative">
+          <!-- burger menu button -->
+          <input type="checkbox" id="menu-toggle" class="hidden peer">
+          <label for="menu-toggle" class="h-[24px] w-[24px] flex justify-center items-center 2xl:hidden cursor-pointer bg-no-repeat bg-center
+            bg-[url('./images/menu-burger.svg')] peer-checked:bg-[url('./images/close-cross.svg')]
+            peer-checked:z-50 peer-checked:fixed peer-checked:bg-[length:16px_16px]" aria-label="Open-close menu">
+          </label>
 
-  <main class="py-8 2xl:pt-[136px] text-shadow select-none">
+          <ul class="flex gap-[50px] w-0 h-0 absolute overflow-hidden transform transition-all duration-300 ease-in-out opacity-0 -translate-x-full
+            2xl:w-auto 2xl:h-auto 2xl:static 2xl:opacity-100 2xl:translate-x-0
+            peer-checked:w-auto peer-checked:h-auto peer-checked:fixed peer-checked:top-0 peer-checked:left-0 peer-checked:flex-col peer-checked:px-4 peer-checked:py-14 peer-checked:min-h-[100vh] peer-checked:bg-[#081223] peer-checked:gap-5 peer-checked:min-w-[200px] peer-checked:z-30
+            peer-checked:translate-x-0 peer-checked:opacity-100 ">
+            <li>
+              <a href="#" class="hover:text-[#8EFCDC] active:text-[#8EFCDC] focus:text-[#8EFCDC] duration-200 ease-in-out">White Paper</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#8EFCDC] active:text-[#8EFCDC] focus:text-[#8EFCDC] duration-200 ease-in-out">Xtrades</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#8EFCDC] active:text-[#8EFCDC] focus:text-[#8EFCDC] duration-200 ease-in-out">CryptoTraders</a>
+            </li>
+          </ul>
+
+          <!-- backdrop -->
+          <label for="menu-toggle" class="hidden peer-checked:block fixed inset-0 bg-black bg-opacity-50 z-20 backdrop-blur-sm"></label>
+        </div>
+
+        <a href="/" class="h-[24px] w-[73px] 2xl:order-1 2xl:h-[48px] 2xl:w-[148px]">
+          <img src="./images/logo-gainlab.svg" alt="Gainlab company logo" class="w-full h-full">
+        </a>
+
+        <a href="#" class="text-[12px] leading-[21.6px] text-[#8EFCDC] ease-in-out duration-200
+          2xl:border-2 2xl:border-[#8EFCDC] 2xl:py-[14px] 2xl:px-[56px] 2xl:text-[18px] 2xl:leading-[29px] 2xl:order-3
+          2xl:hover:bg-[#8EFCDC] 2xl:hover:text-[#0D1210] 2xl:hover:shadow-[0px_0px_20px_0px_#8EFCDC66] 2xl:active:bg-[#8EFCDC] 2xl:active:text-[#0D1210] 2xl:active:shadow-[0px_0px_20px_0px_#8EFCDC66] 2xl:focus:bg-[#8EFCDC] 2xl:focus:text-[#0D1210] 2xl:focus:shadow-[0px_0px_20px_0px_#8EFCDC66]
+          ">
+          connect
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-[22px] 2xl:py-[126px] text-shadow select-none">
     <div class="container mx-auto max-w-screen-xl">
       <h1 class="text-center px-6 2xl:px-0 text-shadow--main 2xl:text-4xl 2xl:leading-[48px]">
         Gainlab.io is the development company by
@@ -36,14 +88,26 @@
     <section>
       <ul class="flex justify-center flex-wrap py-[30px] 2xl:py-[57px] gap-[30px] 2xl:gap-[120px]">
         <li>
+          <!--[if IE]>
           <div tabindex="0" class="w-[315px] 2xl:w-[581px] mx-auto group relative
             before:w-[375px] before:h-[427px] before:bg-[url('./images/bg-product-item.svg')] before:block before:absolute before:left-[-30px] before:bottom-[-20px] before:-z-10 before:opacity-100 before:ease-in-out before:duration-200 before:transition-opacity
             hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
             after:w-[375px] after:h-[427px] after:bg-[url('./images/bg-product-item-hover.svg')] after:block after:absolute after:left-[-30px] after:bottom-[-20px] after:-z-10 after:opacity-0 after:ease-in-out after:duration-200 after:transition-opacity
             hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
             2xl:before:w-[642px] 2xl:before:h-[833px] 2xl:before:bg-[url('./images/bg-product-item-large.svg')] 2xl:before:left-[-30px] 2xl:before:bottom-[-30px]
-            2xl:after:w-[702px] 2xl:after:h-[893px] 2xl:after:bg-[url('./images/bg-product-item-large-hover.svg')] 2xl:after:left-[-60px] 2xl:after:bottom-[-60px]
+            2xl:after:w-[642px] 2xl:after:h-[833px] 2xl:after:bg-[url('./images/bg-product-item-large-hover.svg')] 2xl:after:left-[-30px] 2xl:after:bottom-[-30px]
             ">
+          <![endif]-->
+          <!--[if !IE]><!-->
+          <div tabindex="0" class="w-[315px] 2xl:w-[581px] mx-auto group relative
+            before:w-[375px] before:h-[427px] before:bg-[url('./images/bg-product-item.webp')] before:block before:absolute before:left-[-30px] before:bottom-[-20px] before:-z-10 before:opacity-100 before:ease-in-out before:duration-200 before:transition-opacity
+            hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
+            after:w-[375px] after:h-[427px] after:bg-[url('./images/bg-product-item-hover.webp')] after:block after:absolute after:left-[-30px] after:bottom-[-20px] after:-z-10 after:opacity-0 after:ease-in-out after:duration-200 after:transition-opacity
+            hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
+            2xl:before:w-[642px] 2xl:before:h-[833px] 2xl:before:bg-[url('./images/bg-product-item-large.webp')] 2xl:before:left-[-30px] 2xl:before:bottom-[-30px]
+            2xl:after:w-[642px] 2xl:after:h-[833px] 2xl:after:bg-[url('./images/bg-product-item-large-hover.webp')] 2xl:after:left-[-30px] 2xl:after:bottom-[-30px]
+            ">
+            <!--<![endif]-->
             <div class="absolute -left-6 top-4 -z-10 opacity-10 ease-in-out duration-200
               group-hover:opacity-70 group-active:opacity-70 group-focus:opacity-70
               2xl:top-12 2xl:-left-16
@@ -52,8 +116,14 @@
                 class="block mx-auto w-[150px] h-[95px] 2xl:w-[391px] 2xl:h-[247px]">
             </div>
             <div class="mx-auto">
+              <!--[if IE]>
+              <img src="./images/product-xtrades.png" alt="Xtrades mobile app"
+                class="block mx-auto w-[240px] h-[250px] 2xl:w-[422px] 2xl:h-[554px] pb-1">
+              <![endif]-->
+              <!--[if !IE]><!-->
               <img src="./images/product-xtrades.webp" alt="Xtrades mobile app"
-                class="block mx-auto w-[240px] h-[250px] 2xl:w-[422px] 2xl:h-[554px]">
+                class="block mx-auto w-[240px] h-[250px] 2xl:w-[422px] 2xl:h-[554px] pb-1">
+              <!--<![endif]-->
             </div>
             <div class="h-[171px] 2xl:h-[302px] mx-auto relative">
               <div class="py-4 px-6 2xl:py-[35px] 2xl:px-10">
@@ -64,7 +134,7 @@
               </div>
               <a href="https://app.xtrades.net/invite/Kevin"
                 target="_blank"
-                class="uppercase leading-6 tracking-[0.2em] w-[151px] h-[66px] 2xl:w-[311px] 2xl:h-[110px] bg-[#8EFCDC]/40 ease-in-out duration-200 button--visit flex items-center justify-center absolute right-0 bottom-0
+                class="uppercase leading-6 tracking-[0.2em] w-[151px] h-[66px] 2xl:w-[311px] 2xl:h-[110px] bg-[#8EFCDC]/40 ease-in-out duration-200 button--visit flex items-center justify-center absolute right-0 bottom-[2px]
                 hover:bg-[#8EFCDC] hover:text-[#0D1210] focus:bg-[#8EFCDC] focus:text-[#0D1210] active:bg-[#8EFCDC] active:text-[#0D1210] group-hover:bg-[#8EFCDC] group-hover:text-[#0D1210] group-active:bg-[#8EFCDC] group-active:text-[#0D1210] group-focus:bg-[#8EFCDC] group-focus:text-[#0D1210]">
                 visit</a>
             </div>
@@ -72,14 +142,26 @@
         </li>
 
         <li>
+          <!--[if IE]>
           <div tabindex="0" class="w-[315px] 2xl:w-[581px] mx-auto group relative
             before:w-[375px] before:h-[427px] before:bg-[url('./images/bg-product-item.svg')] before:block before:absolute before:left-[-30px] before:bottom-[-20px] before:-z-10 before:opacity-100 before:ease-in-out before:duration-200 before:transition-opacity
             hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
             after:w-[375px] after:h-[427px] after:bg-[url('./images/bg-product-item-hover.svg')] after:block after:absolute after:left-[-30px] after:bottom-[-20px] after:-z-10 after:opacity-0 after:ease-in-out after:duration-200 after:transition-opacity
             hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
             2xl:before:w-[642px] 2xl:before:h-[833px] 2xl:before:bg-[url('./images/bg-product-item-large.svg')] 2xl:before:left-[-30px] 2xl:before:bottom-[-30px]
-            2xl:after:w-[702px] 2xl:after:h-[893px] 2xl:after:bg-[url('./images/bg-product-item-large-hover.svg')] 2xl:after:left-[-60px] 2xl:after:bottom-[-60px]
+            2xl:after:w-[642px] 2xl:after:h-[833px] 2xl:after:bg-[url('./images/bg-product-item-large-hover.svg')] 2xl:after:left-[-30px] 2xl:after:bottom-[-30px]
             ">
+          <![endif]-->
+          <!--[if !IE]><!-->
+          <div tabindex="0" class="w-[315px] 2xl:w-[581px] mx-auto group relative
+            before:w-[375px] before:h-[427px] before:bg-[url('./images/bg-product-item.webp')] before:block before:absolute before:left-[-30px] before:bottom-[-20px] before:-z-10 before:opacity-100 before:ease-in-out before:duration-200 before:transition-opacity
+            hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
+            after:w-[375px] after:h-[427px] after:bg-[url('./images/bg-product-item-hover.webp')] after:block after:absolute after:left-[-30px] after:bottom-[-20px] after:-z-10 after:opacity-0 after:ease-in-out after:duration-200 after:transition-opacity
+            hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
+            2xl:before:w-[642px] 2xl:before:h-[833px] 2xl:before:bg-[url('./images/bg-product-item-large.webp')] 2xl:before:left-[-30px] 2xl:before:bottom-[-30px]
+            2xl:after:w-[642px] 2xl:after:h-[833px] 2xl:after:bg-[url('./images/bg-product-item-large-hover.webp')] 2xl:after:left-[-30px] 2xl:after:bottom-[-30px]
+            ">
+            <!--<![endif]-->
             <div class="absolute -right-6 top-4 opacity-10 -z-10 ease-in-out duration-200
               group-hover:opacity-90 group-active:opacity-90 group-focus:opacity-90
               2xl:top-12 2xl:-right-16
@@ -88,8 +170,14 @@
                 class="block mx-auto w-[128px] h-[136px] 2xl:w-[311px] 2xl:h-[331px]">
             </div>
             <div class="mx-auto">
+              <!--[if IE]>
+              <img src="./images/product-crypto.png" alt="Xtrades mobile app"
+                class="block mx-auto w-[240px] h-[250px] 2xl:w-[422px] 2xl:h-[554px] pb-1">
+              <![endif]-->
+              <!--[if !IE]><!-->
               <img src="./images/product-crypto.webp" alt="Xtrades mobile app"
-                class="block mx-auto w-[240px] h-[250px] 2xl:w-[422px] 2xl:h-[554px]">
+                class="block mx-auto w-[240px] h-[250px] 2xl:w-[422px] 2xl:h-[554px] pb-1">
+              <!--<![endif]-->
             </div>
             <div class="h-[171px] 2xl:h-[302px] mx-auto relative">
               <div class="py-4 px-6 2xl:py-[35px] 2xl:px-10">
@@ -100,7 +188,7 @@
               </div>
               <a href="https://www.cryptotraders.com"
                 target="_blank"
-                class="uppercase leading-6 tracking-[0.2em] w-[151px] h-[66px] 2xl:w-[311px] 2xl:h-[110px] bg-[#8EFCDC]/40 ease-in-out duration-200 button--visit flex items-center justify-center absolute right-0 bottom-0
+                class="uppercase leading-6 tracking-[0.2em] w-[151px] h-[66px] 2xl:w-[311px] 2xl:h-[110px] bg-[#8EFCDC]/40 ease-in-out duration-200 button--visit flex items-center justify-center absolute right-0 bottom-[2px]
                 hover:bg-[#8EFCDC] hover:text-[#0D1210] focus:bg-[#8EFCDC] focus:text-[#0D1210] active:bg-[#8EFCDC] active:text-[#0D1210] group-hover:bg-[#8EFCDC] group-hover:text-[#0D1210] group-active:bg-[#8EFCDC] group-active:text-[#0D1210] group-focus:bg-[#8EFCDC] group-focus:text-[#0D1210]">
                 visit</a>
             </div>
@@ -110,15 +198,26 @@
     </section>
 
     <section class="flex justify-center py-[30px] 2xl:py-[123px]">
+      <!--[if IE]>
       <div tabindex="0" class="px-12 py-4 max-w-[320px] uppercase text-base text-center tracking-[0.15em] inline-block relative ease-in-out duration-200
         2xl:text-4xl 2xl:pt-[80px] 2xl:pb-20 2xl:px-36 2xl:max-w-full
         before:w-[375px] before:h-[144px] before:block before:absolute before:bg-[url('./images/quote.svg')] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-z-10 before:bg-no-repeat before:bg-center
         hover:before:bg-[url('./images/quote-hover.svg')] active:before:bg-[url('./images/quote-hover.svg')] focus:before:bg-[url('./images/quote-hover.svg')]
-        2xl:before:w-[1092px] 2xl:before:h-[325px] 2xl:before:bg-[url('./images/quote-large.svg')] 2xl:hover:before:bg-[url('./images/quote-large-hover.svg')]
+        2xl:before:w-[1092px] 2xl:before:h-[325px] 2xl:before:bg-[url('./images/quote-large.svg')] 2xl:hover:before:bg-[url('./images/quote-large-hover.svg')] 2xl:focus:before:bg-[url('./images/quote-large-hover.svg')] 2xl:active:before:bg-[url('./images/quote-large-hover.svg')]
         ">Become a Part of History</div>
+      <![endif]-->
+      <!--[if !IE]><!-->
+      <div tabindex="0" class="px-12 py-4 max-w-[320px] uppercase text-base text-center tracking-[0.15em] inline-block relative ease-in-out duration-200
+        2xl:text-4xl 2xl:pt-[80px] 2xl:pb-20 2xl:px-36 2xl:max-w-full
+        before:w-[375px] before:h-[144px] before:block before:absolute before:bg-[url('./images/quote.webp')] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-z-10 before:bg-no-repeat before:bg-center
+        hover:before:bg-[url('./images/quote-hover.webp')] active:before:bg-[url('./images/quote-hover.webp')] focus:before:bg-[url('./images/quote-hover.webp')]
+        2xl:before:w-[1092px] 2xl:before:h-[325px] 2xl:before:bg-[url('./images/quote-large.webp')] 2xl:hover:before:bg-[url('./images/quote-large-hover.webp')] 2xl:focus:before:bg-[url('./images/quote-large-hover.webp')] 2xl:active:before:bg-[url('./images/quote-large-hover.webp')]
+        ">Become a Part of History</div>
+      <!--<![endif]-->
     </section>
 
     <section class="py-[20px]">
+      <!--[if IE]>
       <div tabindex="0" class="w-[315px] h-[575px] mx-auto relative pt-[70px] group 2xl:w-[1280px] 2xl:h-[571px] 2xl:pt-[122px] 2xl:flex ease-in-out duration-200
         after:block after:w-[375px] after:h-[637px] after:bg-[url('./images/bg-membership-item.svg')] after:absolute after:bg-no-repeat after:bg-center after:-top-[calc((637px-575px)/2)] after:-left-[calc((375px-315px)/2)] after:-z-10 after:opacity-100
         hover:after:opacity-0 active:after:opacity-0 focus:after:opacity-0
@@ -127,6 +226,17 @@
         2xl:after:w-[1402px] 2xl:after:h-[693px] 2xl:after:bg-[url('./images/bg-membership-item-large.svg')] 2xl:after:left-[-60px] 2xl:after:top-[-60px]
         2xl:before:w-[1342px] 2xl:before:h-[634px] 2xl:before:bg-[url('./images/bg-membership-item-large-hover.svg')] 2xl:before:-top-[calc((634px-571px)/2)] 2xl:before:-left-[calc((1342px-1280px)/2)
         ">
+      <![endif]-->
+      <!--[if !IE]><!-->
+      <div tabindex="0" class="w-[315px] h-[575px] mx-auto relative pt-[70px] group 2xl:w-[1280px] 2xl:h-[571px] 2xl:pt-[122px] 2xl:flex ease-in-out duration-200
+        after:block after:w-[375px] after:h-[637px] after:bg-[url('./images/bg-membership-item.webp')] after:absolute after:bg-no-repeat after:bg-center after:-top-[calc((637px-575px)/2)] after:-left-[calc((375px-315px)/2)] after:-z-10 after:opacity-100
+        hover:after:opacity-0 active:after:opacity-0 focus:after:opacity-0
+        before:block before:w-[375px] before:h-[697px] before:bg-[url('./images/bg-membership-item-hover.webp')] before:absolute before:bg-no-repeat before:bg-center before:-top-[calc((697px-575px)/2)] before:-left-[calc((375px-315px)/2)] before:-z-10 before:opacity-0
+        hover:before:opacity-100 active:before:opacity-100 focus:before:opacity-100
+        2xl:after:w-[1402px] 2xl:after:h-[693px] 2xl:after:bg-[url('./images/bg-membership-item-large.webp')] 2xl:after:left-[-60px] 2xl:after:top-[-60px]
+        2xl:before:w-[1342px] 2xl:before:h-[634px] 2xl:before:bg-[url('./images/bg-membership-item-large-hover.webp')] 2xl:before:-top-[calc((634px-571px)/2)] 2xl:before:-left-[calc((1342px-1280px)/2)
+        ">
+      <!--<![endif]-->
         <div
           class="w-[calc(2*133px-133px/2)] h-[calc(2*133px-133px/2)] mx-auto mb-[26px] 2xl:w-[calc(2*256px-256px/2)] 2xl:h-[calc(2*256px-256px/2)] 2xl:mx-[91px] 2xl:inline-block">
           <img src="./images/membership-x.svg" alt="x logo"
@@ -155,6 +265,7 @@
     <section class="py-[30px] 2xl:py-[130px] max-w-screen-sm 2xl:max-w-screen-xl container mx-auto overflow-hidden">
       <ul class="flex flex-wrap items-center justify-center gap-[11px] 2xl:gap-[31px] ">
         <li>
+          <!--[if IE]>
           <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
             before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.svg')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
             hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
@@ -163,6 +274,17 @@
             hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
             2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.svg')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
             ">
+          <![endif]-->
+          <!--[if !IE]><!-->
+          <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
+            before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.webp')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
+            hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
+            2xl:before:w-[468px] 2xl:before:h-[243px] 2xl:before:bg-[url('./images/bg-stats-item-large.webp')] 2xl:before:top-[-31px] 2xl:before:left-[-31px]
+            after:w-[243px] after:h-[227px] after:bg-[url('./images/bg-stats-item-hover.webp')] after:block after:absolute after:top-[-61px] after:left-[-30px] after:-z-10 after:opacity-0
+            hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
+            2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.webp')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
+            ">
+          <!--<![endif]-->
             <h3 class="uppercase text-xs text-center 2xl:text-2xl">Monthly <br> Active Users</h3>
             <p class="text-[30px] leading-[39.57px] 2xl:text-[48px] 2xl:leading-[62.3px] text-[#4EFDD5] text-center">48K
             </p>
@@ -170,6 +292,7 @@
         </li>
 
         <li>
+          <!--[if IE]>
           <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
             before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.svg')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
             hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
@@ -178,6 +301,17 @@
             hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
             2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.svg')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
             ">
+          <![endif]-->
+          <!--[if !IE]><!-->
+          <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
+            before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.webp')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
+            hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
+            2xl:before:w-[468px] 2xl:before:h-[243px] 2xl:before:bg-[url('./images/bg-stats-item-large.webp')] 2xl:before:top-[-31px] 2xl:before:left-[-31px]
+            after:w-[243px] after:h-[227px] after:bg-[url('./images/bg-stats-item-hover.webp')] after:block after:absolute after:top-[-61px] after:left-[-30px] after:-z-10 after:opacity-0
+            hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
+            2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.webp')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
+            ">
+          <!--<![endif]-->
             <h3 class="uppercase text-xs text-center 2xl:text-2xl">app users and growing!</h3>
             <p class="text-[30px] leading-[39.57px] 2xl:text-[48px] 2xl:leading-[62.3px] text-[#4EFDD5] text-center">8K
             </p>
@@ -185,6 +319,7 @@
         </li>
 
         <li>
+          <!--[if IE]>
           <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
             before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.svg')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
             hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
@@ -193,6 +328,17 @@
             hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
             2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.svg')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
             ">
+          <![endif]-->
+          <!--[if !IE]><!-->
+          <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
+            before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.webp')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
+            hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
+            2xl:before:w-[468px] 2xl:before:h-[243px] 2xl:before:bg-[url('./images/bg-stats-item-large.webp')] 2xl:before:top-[-31px] 2xl:before:left-[-31px]
+            after:w-[243px] after:h-[227px] after:bg-[url('./images/bg-stats-item-hover.webp')] after:block after:absolute after:top-[-61px] after:left-[-30px] after:-z-10 after:opacity-0
+            hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
+            2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.webp')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
+            ">
+          <!--<![endif]-->
             <h3 class="uppercase text-xs text-center 2xl:text-2xl">MRR growth <br> the last 4 yrs</h3>
             <p class="text-[30px] leading-[39.57px] 2xl:text-[48px] 2xl:leading-[62.3px] text-[#4EFDD5] text-center">
               1.4K%</p>
@@ -200,6 +346,7 @@
         </li>
 
         <li>
+          <!--[if IE]>
           <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
             before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.svg')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
             hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
@@ -208,6 +355,17 @@
             hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
             2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.svg')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
             ">
+          <![endif]-->
+          <!--[if !IE]><!-->
+          <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
+            before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.webp')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
+            hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
+            2xl:before:w-[468px] 2xl:before:h-[243px] 2xl:before:bg-[url('./images/bg-stats-item-large.webp')] 2xl:before:top-[-31px] 2xl:before:left-[-31px]
+            after:w-[243px] after:h-[227px] after:bg-[url('./images/bg-stats-item-hover.webp')] after:block after:absolute after:top-[-61px] after:left-[-30px] after:-z-10 after:opacity-0
+            hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
+            2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.webp')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
+            ">
+          <!--<![endif]-->
             <h3 class="uppercase text-xs text-center 2xl:text-2xl">56 Mo Profitable Streak</h3>
             <p class="text-[30px] leading-[39.57px] 2xl:text-[48px] 2xl:leading-[62.3px] text-[#4EFDD5] text-center">
               100%</p>
@@ -215,6 +373,7 @@
         </li>
 
         <li>
+          <!--[if IE]>
           <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
             before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.svg')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
             hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
@@ -223,6 +382,17 @@
             hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
             2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.svg')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
             ">
+          <![endif]-->
+          <!--[if !IE]><!-->
+          <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
+            before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.webp')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
+            hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
+            2xl:before:w-[468px] 2xl:before:h-[243px] 2xl:before:bg-[url('./images/bg-stats-item-large.webp')] 2xl:before:top-[-31px] 2xl:before:left-[-31px]
+            after:w-[243px] after:h-[227px] after:bg-[url('./images/bg-stats-item-hover.webp')] after:block after:absolute after:top-[-61px] after:left-[-30px] after:-z-10 after:opacity-0
+            hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
+            2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.webp')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
+            ">
+          <!--<![endif]-->
             <h3 class="uppercase text-xs text-center 2xl:text-2xl">VC’s Control or invest</h3>
             <p class="text-[30px] leading-[39.57px] 2xl:text-[48px] 2xl:leading-[62.3px] text-[#4EFDD5] text-center">0
             </p>
@@ -230,6 +400,7 @@
         </li>
 
         <li>
+          <!--[if IE]>
           <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
             before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.svg')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
             hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
@@ -238,6 +409,17 @@
             hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
             2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.svg')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
             ">
+          <![endif]-->
+          <!--[if !IE]><!-->
+          <div tabindex="0" class="w-[152px] h-[105px] pt-[9px] pb-[22px] px-[18px] flex flex-col-reverse justify-end gap-0.5 relative 2xl:w-[406px] 2xl:h-[180px] 2xl:pt-[26px] 2xl:pb-[22px] 2xl:px-[58px] 2xl:gap-[15px] ease-in-out duration-200 transition-opacity
+            before:w-[184px] before:h-[137px] before:bg-[url('./images/bg-stats-item.webp')] before:block before:absolute before:top-[-16px] before:left-[-16px] before:-z-10 before:opacity-100
+            hover:before:opacity-0 active:before:opacity-0 focus:before:opacity-0
+            2xl:before:w-[468px] 2xl:before:h-[243px] 2xl:before:bg-[url('./images/bg-stats-item-large.webp')] 2xl:before:top-[-31px] 2xl:before:left-[-31px]
+            after:w-[243px] after:h-[227px] after:bg-[url('./images/bg-stats-item-hover.webp')] after:block after:absolute after:top-[-61px] after:left-[-30px] after:-z-10 after:opacity-0
+            hover:after:opacity-100 active:after:opacity-100 focus:after:opacity-100
+            2xl:after:w-[528px] 2xl:after:h-[303px] 2xl:after:bg-[url('./images/bg-stats-item-large-hover.webp')] 2xl:after:top-[-61px] 2xl:after:left-[-61px]
+            ">
+          <!--<![endif]-->
             <h3 class="uppercase text-xs text-center 2xl:text-2xl">Bootstrapped</h3>
             <p class="text-[30px] leading-[39.57px] 2xl:text-[48px] 2xl:leading-[62.3px] text-[#4EFDD5] text-center">
               100%</p>
@@ -260,16 +442,34 @@
       <ul class="flex justify-center flex-col items-center gap-[50px] sm:flex-row flex-wrap 2xl:gap-[100px]">
         <li class="max-w-[375px] 2xl:max-w-[360px]">
           <div tabindex="0" class="flex flex-col gap-[30px] items-center 2xl:gap-[40px] group">
+            <!--[if IE]>
             <div class="px-[52.5px] py-[50px] relative ease-in-out duration-200
-              before:absolute before:top-[-61px] before:left-[-61px] before:w-[322px] before:h-[322px] before:bg-[url('./images/bg-promote-item.svg')] before:-z-10 before:opacity-100
+              before:absolute before:top-[-61px] before:left-[-61px] before:w-[322px] before:h-[322px] before:bg-[url('./images/bg-promote-item.svg')] before:-z-10 before:opacity-100 before:bg-no-repeat before:bg-center
               group-hover:before:opacity-0 group-active:before:opacity-0 group-focus:before:opacity-0
               2xl:px-[85px] 2xl:py-[80px] 2xl:before:top-[-31px] 2xl:before:left-[-31px] 2xl:before:w-[422px] 2xl:before:h-[422px] 2xl:before:bg-[url('./images/bg-promote-item-large.svg')]
               after:absolute after:top-[-61px] after:left-[-61px] after:w-[322px] after:h-[322px] after:bg-[url('./images/bg-promote-item-hover.svg')] after:-z-10 after:opacity-0
               group-hover:after:opacity-100 group-active:after:opacity-100 group-focus:after:opacity-100
               2xl:after:absolute 2xl:after:w-[482px] 2xl:after:h-[482px] 2xl:after:bg-[url('./images/bg-promote-item-large-hover.svg')] 2xl:after:-z-10 2xl:after:top-[-61px] 2xl:after:left-[-61px]
               ">
+            <![endif]-->
+            <!--[if !IE]><!-->
+            <div class="px-[52.5px] py-[50px] relative ease-in-out duration-200
+              before:absolute before:top-[-61px] before:left-[-61px] before:w-[322px] before:h-[322px] before:bg-[url('./images/bg-promote-item.webp')] before:-z-10 before:opacity-100 before:bg-no-repeat before:bg-center
+              group-hover:before:opacity-0 group-active:before:opacity-0 group-focus:before:opacity-0
+              2xl:px-[85px] 2xl:py-[80px] 2xl:before:top-[-31px] 2xl:before:left-[-31px] 2xl:before:w-[422px] 2xl:before:h-[422px] 2xl:before:bg-[url('./images/bg-promote-item-large.webp')]
+              after:absolute after:top-[-61px] after:left-[-61px] after:w-[322px] after:h-[322px] after:bg-[url('./images/bg-promote-item-hover.webp')] after:-z-10 after:opacity-0
+              group-hover:after:opacity-100 group-active:after:opacity-100 group-focus:after:opacity-100
+              2xl:after:absolute 2xl:after:w-[482px] 2xl:after:h-[482px] 2xl:after:bg-[url('./images/bg-promote-item-large-hover.webp')] 2xl:after:-z-10 2xl:after:top-[-61px] 2xl:after:left-[-61px]
+              ">
+            <!--<![endif]-->
+              <!--[if IE]>
+              <img src="./images/promote-service-pure_picks.png" alt="Pure picks service logo"
+                class="w-[95px] h-[100px] 2xl:w-[190px] 2xl:h-[200px]">
+              <![endif]-->
+              <!--[if !IE]><!-->
               <img src="./images/promote-service-pure_picks.webp" alt="Pure picks service logo"
                 class="w-[95px] h-[100px] 2xl:w-[190px] 2xl:h-[200px]">
+              <!--<![endif]-->
             </div>
             <div class=" px-[30px] text-center  2xl:px-0">
               <h3
@@ -289,6 +489,21 @@
     </section>
 
   </main>
+
+  <footer class="hidden text-[18px] leading-[32.4px] pb-9 2xl:block">
+    <div class="container mx-auto max-w-screen-xl">
+      <nav class="grid grid-cols-5 items-center uppercase mb-16 text-center">
+        <a href="#" class="hover:text-[#8EFCDC] active:text-[#8EFCDC] focus:text-[#8EFCDC] duration-200 ease-in-out">About</a>
+        <a href="#" class="hover:text-[#8EFCDC] active:text-[#8EFCDC] focus:text-[#8EFCDC] duration-200 ease-in-out">Contact</a>
+        <a href="/" class="flex justify-center">
+          <img src="./images/logo-gainlab.svg" alt="Gainlab company logo" class="h-[48px] w-[148px]">
+        </a>
+        <a href="#" class="hover:text-[#8EFCDC] active:text-[#8EFCDC] focus:text-[#8EFCDC] duration-200 ease-in-out">Help</a>
+        <a href="#" class="hover:text-[#8EFCDC] active:text-[#8EFCDC] focus:text-[#8EFCDC] duration-200 ease-in-out">Terms of Service</a>
+      </nav>
+      <p class="text-center text-[#8A93AD] font-normal">gainlab.io ©. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
